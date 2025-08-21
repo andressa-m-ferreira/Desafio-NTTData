@@ -17,13 +17,13 @@ A proposta consiste em desenvolver 3 cenários de testes automatizados para o fr
 - Qualidade e clareza nos commits (Conventional Commits).
 
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
-[Cypress](https://www.cypress.io/): Framework principal para a automação dos testes E2E e de API.
-[Node.js](https://nodejs.org/pt): Ambiente de execução para o JavaScript.
-[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript): Linguagem de programação para a escrita dos testes.
-[Mochawesome](https://www.npmjs.com/package/mochawesome): Ferramenta para geração de relatórios de teste em HTML, facilitando a visualização dos resultados.
-[@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker): Biblioteca para geração de dados de teste dinâmicos e realistas.
-[Git & GitHub](https://github.com/): Para versionamento de código e hospedagem do projeto.
-[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/): Padrão para a escrita de mensagens de commit claras e significativas.
+- [Cypress](https://www.cypress.io/): Framework principal para a automação dos testes E2E e de API.
+- [Node.js](https://nodejs.org/pt): Ambiente de execução para o JavaScript.
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript): Linguagem de programação para a escrita dos testes.
+- [Mochawesome](https://www.npmjs.com/package/mochawesome): Ferramenta para geração de relatórios de teste em HTML, facilitando a visualização dos resultados.
+- [@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker): Biblioteca para geração de dados de teste dinâmicos e realistas.
+- [Git & GitHub](https://github.com/): Para versionamento de código e hospedagem do projeto.
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/): Padrão para a escrita de mensagens de commit claras e significativas.
 ## 📂 Estrutura do Projeto
 O projeto foi estruturado para garantir a separação de responsabilidades, escalabilidade e fácil manutenção, seguindo as melhores práticas do Cypress:
 Plain Text
