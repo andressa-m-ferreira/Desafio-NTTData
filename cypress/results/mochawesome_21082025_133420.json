@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-21T16:34:13.801Z",
+    "end": "2025-08-21T16:34:20.650Z",
+    "duration": 6849,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "45f6a6ee-03a1-4599-96b5-921533e7c2b6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\frontend\\login.cy.js",
+      "file": "cypress\\e2e\\frontend\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "04ab4d19-cdcf-4c03-bca4-0d5726ba5cb1",
+          "title": "Login do administrador",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login de admin bem sucedido (happy path)",
+              "fullTitle": "Login do administrador Login de admin bem sucedido (happy path)",
+              "timedOut": null,
+              "duration": 4462,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('credenciais').then(credenciais => {\n  cy.get('[data-testid=\"email\"]').click().type(credenciais.admin.email);\n  cy.get('[data-testid=\"senha\"]').click().type(credenciais.admin.password);\n});\ncy.get('[data-testid=\"entrar\"]').click();\ncy.get('.lead').should('contain', 'Este é seu sistema para administrar seu ecommerce.');",
+              "err": {},
+              "uuid": "7c6991b9-7634-41e9-ad31-d4279a58a721",
+              "parentUUID": "04ab4d19-cdcf-4c03-bca4-0d5726ba5cb1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login de admin inválido",
+              "fullTitle": "Login do administrador Login de admin inválido",
+              "timedOut": null,
+              "duration": 2193,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('credenciais').then(credenciais => {\n  cy.get('[data-testid=\"email\"]').click().type(credenciais.adminInvalid.email);\n  cy.get('[data-testid=\"senha\"]').click().type(credenciais.adminInvalid.password);\n});\ncy.get('[data-testid=\"entrar\"]').click();\ncy.get('.alert').should('contain', 'Email e/ou senha inválidos');",
+              "err": {},
+              "uuid": "7b7ecb6f-3e31-4bc9-8c11-41fdd49420fb",
+              "parentUUID": "04ab4d19-cdcf-4c03-bca4-0d5726ba5cb1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7c6991b9-7634-41e9-ad31-d4279a58a721",
+            "7b7ecb6f-3e31-4bc9-8c11-41fdd49420fb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6655,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "ddmmyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

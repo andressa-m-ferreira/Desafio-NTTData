@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-21T16:33:56.716Z",
+    "end": "2025-08-21T16:33:57.624Z",
+    "duration": 908,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "15ff16c5-35c1-4f87-9a9a-5978c9bfc7e6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\backend\\login.cy.js",
+      "file": "cypress\\e2e\\backend\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bf1663c0-39fa-489f-a41f-3a12ca5e4204",
+          "title": "Testes de API - Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve realizar login com sucesso e obter um token de autenticação",
+              "fullTitle": "Testes de API - Login Deve realizar login com sucesso e obter um token de autenticação",
+              "timedOut": null,
+              "duration": 603,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: `${Cypress.env('apiUrl')}/login`,\n  body: {\n    email: _constants.USER_ADMIN.email,\n    password: _constants.USER_ADMIN.password\n  }\n}).then(response => {\n  // Assertivas usando Chai\n  expect(response.status).to.equal(200);\n  expect(response.body).to.have.property('message', 'Login realizado com sucesso');\n  expect(response.body).to.have.property('authorization');\n  expect(response.body.authorization).to.not.be.empty;\n  // Opcional: Salvar o token para uso em outros testes (abordaremos isso no próximo passo)\n  Cypress.env('authToken', response.body.authorization);\n});",
+              "err": {},
+              "uuid": "3cf2fd1a-e251-4eb1-a3f7-f203cad44407",
+              "parentUUID": "bf1663c0-39fa-489f-a41f-3a12ca5e4204",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve falhar o login com credenciais inválidas",
+              "fullTitle": "Testes de API - Login Deve falhar o login com credenciais inválidas",
+              "timedOut": null,
+              "duration": 241,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: `${Cypress.env('apiUrl')}/login`,\n  failOnStatusCode: false,\n  // Não falhar o teste se o status code não for 2xx\n  body: {\n    email: _constants.USER_ADMIN.email,\n    password: 'senha_invalida'\n  }\n}).then(response => {\n  // Assertivas usando Chai\n  expect(response.status).to.equal(401); // Unauthorized\n  expect(response.body).to.have.property('message', 'Email e/ou senha inválidos');\n});",
+              "err": {},
+              "uuid": "e72c560c-3fc1-46ba-a7bd-a3e5ec6aae03",
+              "parentUUID": "bf1663c0-39fa-489f-a41f-3a12ca5e4204",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3cf2fd1a-e251-4eb1-a3f7-f203cad44407",
+            "e72c560c-3fc1-46ba-a7bd-a3e5ec6aae03"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 844,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "ddmmyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
