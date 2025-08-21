@@ -1,0 +1,14 @@
+{
+    "usuario": {
+        "email": "test@test.com",
+        "password": "test123"
+    },
+    "admin":{
+        "email": "haydee.kuhic@gmail.com",
+        "password": "ddrnhahy1f" 
+    },
+    "adminInvalid":{
+        "email": "invalid@admin.com",
+        "password": "123admin" 
+    }
+}
