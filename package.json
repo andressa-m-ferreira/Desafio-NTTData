@@ -1,0 +1,26 @@
+{
+  "name": "desafio-nttdata",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andressa-m-ferreira/Desafio-NTTData.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andressa-m-ferreira/Desafio-NTTData/issues"
+  },
+  "homepage": "https://github.com/andressa-m-ferreira/Desafio-NTTData#readme",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.5.4",
+    "cypress-file-upload": "^5.0.8",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0"
+  }
+}
